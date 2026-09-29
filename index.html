@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restechx — Smart MaT</title>
+  <meta name="description" content="Restechx builds smart IoT, embedded, automation and AI/ML solutions. Meet Smart MaT — automated mat cleaning for hospitals, schools and offices.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand" aria-label="Restechx home">
+      <svg class="mini-globe" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="15" />
+        <ellipse class="spin-a" cx="20" cy="20" rx="6" ry="15" />
+        <line x1="5" y1="20" x2="35" y2="20" />
+      </svg>
+      <span>Restechx</span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#team">Team</a>
+      <a href="#product">Smart MaT</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav__cta">Contact</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO / LOGO ============ -->
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+
+  <div class="logo" role="img" aria-label="Restechx logo">
+    <svg class="logo__mark" viewBox="0 0 160 150" aria-hidden="true">
+      <defs>
+        <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f3dfa2"/>
+          <stop offset=".45" stop-color="#c9a45c"/>
+          <stop offset="1" stop-color="#8a6a2e"/>
+        </linearGradient>
+        <clipPath id="globeClip"><circle cx="72" cy="68" r="50"/></clipPath>
+      </defs>
+      <g class="globe" stroke="url(#gold)" fill="none" stroke-width="3">
+        <circle cx="72" cy="68" r="50"/>
+        <g clip-path="url(#globeClip)">
+          <ellipse class="mer m1" cx="72" cy="68" rx="50" ry="50"/>
+          <ellipse class="mer m2" cx="72" cy="68" rx="50" ry="50"/>
+          <ellipse class="mer m3" cx="72" cy="68" rx="50" ry="50"/>
+          <line x1="72" y1="18" x2="72" y2="118"/>
+          <line x1="22" y1="68" x2="122" y2="68"/>
+          <path d="M28 44 Q72 54 116 44"/>
+          <path d="M28 92 Q72 82 116 92"/>
+        </g>
+      </g>
+      <g class="cursor">
+        <path d="M86 70 L86 128 L99 115 L109 138 L119 133 L109 111 L127 111 Z"
+              fill="url(#gold)" stroke="#6b5122" stroke-width="1.5" stroke-linejoin="round"/>
+        <circle class="ripple" cx="86" cy="70" r="4" />
+      </g>
+    </svg>
+
+    <div class="logo__word">
+      <span class="logo__text">Restechx</span>
+      <svg class="logo__chip" viewBox="0 0 60 60" aria-hidden="true">
+        <g fill="none" stroke="url(#gold)" stroke-width="2" stroke-linecap="round">
+          <path class="trace" d="M22 20 H12 V10 H4"/>
+          <path class="trace" d="M22 28 H8"/>
+          <path class="trace" d="M22 36 H12 V46 H4"/>
+          <path class="trace" d="M38 20 H48 V10 H56"/>
+          <path class="trace" d="M38 28 H52"/>
+          <path class="trace" d="M38 36 H48 V46 H56"/>
+          <path class="trace" d="M30 16 V4"/>
+          <path class="trace" d="M30 42 V56"/>
+        </g>
+        <g fill="url(#gold)">
+          <circle cx="4" cy="10" r="2.2"/><circle cx="8" cy="28" r="2.2"/><circle cx="4" cy="46" r="2.2"/>
+          <circle cx="56" cy="10" r="2.2"/><circle cx="52" cy="28" r="2.2"/><circle cx="56" cy="46" r="2.2"/>
+          <circle cx="30" cy="4" r="2.2"/><circle cx="30" cy="56" r="2.2"/>
+        </g>
+        <rect class="chip-core" x="22" y="16" width="16" height="26" rx="3" fill="url(#gold)"/>
+      </svg>
+    </div>
+  </div>
+
+  <h1 class="hero__title reveal">Smart, connected technology<br><span class="muted">for a more automated future.</span></h1>
+  <p class="hero__sub reveal">IoT · Embedded Systems · Automation · AI/ML</p>
+  <div class="hero__actions reveal">
+    <a class="btn btn--gold" href="#product">Meet Smart MaT</a>
+    <a class="link-arrow" href="#about">About Restechx</a>
+  </div>
+  <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+  <div class="container">
+    <p class="eyebrow reveal">About</p>
+    <h2 class="statement reveal">
+      <strong>Restechx</strong> is a forward‑thinking startup delivering innovative solutions in
+      <span class="hl">IoT</span>, <span class="hl">embedded systems</span>, <span class="hl">automation</span> and <span class="hl">AI/ML</span> —
+      helping industries run smarter, cleaner and more efficiently.
+    </h2>
+
+    <div class="vm">
+      <article class="vm__card reveal">
+        <span class="vm__label">Vision</span>
+        <p>To be a global leader in driving innovation through smart IoT, embedded systems, automation, and AI/ML solutions, creating a future where technology seamlessly enhances efficiency and transforms industries.</p>
+      </article>
+      <article class="vm__card reveal">
+        <span class="vm__label">Mission</span>
+        <p>To deliver cutting‑edge, reliable, and scalable technologies that empower businesses to optimize their processes, improve decision‑making, and foster sustainability, while continually pushing the boundaries of automation and intelligent systems.</p>
+      </article>
+    </div>
+
+    <div class="services reveal">
+      <p class="eyebrow">Engineering services</p>
+      <ul>
+        <li><span>01</span>Product development</li>
+        <li><span>02</span>Project consulting</li>
+        <li><span>03</span>Business consulting — marketing &amp; sales</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section class="section team" id="team">
+  <div class="container">
+    <p class="eyebrow reveal">The founders</p>
+    <h2 class="section-title reveal">The people behind Restechx.</h2>
+    <div class="team__grid">
+      <article class="person reveal">
+        <div class="person__photo"><img src="assets/sridevi.jpg" alt="Dr. Sridevi S" loading="lazy"></div>
+        <h3>Dr. Sridevi S</h3>
+        <p>Research &amp; Market Analyst<br>and Business Development</p>
+      </article>
+      <article class="person reveal">
+        <div class="person__photo"><img src="assets/niranjan.jpg" alt="Dr. Niranjan L" loading="lazy"></div>
+        <h3>Dr. Niranjan L</h3>
+        <p>Product Development &amp; Testing —<br>Embedded Systems, IoT · Project Consultant</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCT (Apple-style) ============ -->
+<section class="product" id="product">
+  <div class="product__intro">
+    <p class="product__kicker reveal">New from Restechx</p>
+    <h2 class="product__name reveal">Smart MaT</h2>
+    <p class="product__tag reveal">Clean mats. Zero effort.</p>
+    <div class="product__ctas reveal">
+      <a href="#pricing" class="btn btn--light">See pricing</a>
+      <a href="#how" class="link-arrow link-arrow--light">How it works</a>
+    </div>
+  </div>
+
+  <div class="product__stage" id="stage">
+    <div class="product__sticky">
+      <img class="product__img" id="productImg" src="assets/smart-mat.webp" alt="Smart MaT automated mat-cleaning machine" width="1448" height="1086">
+    </div>
+  </div>
+
+  <div class="product__lines container">
+    <p class="bigline reveal">Built for places where <em>hygiene matters most.</em></p>
+    <div class="uses">
+      <div class="use reveal"><span class="use__icon">
+        <svg viewBox="0 0 24 24"><path d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16M9 21v-5h6v5M12 7v5M9.5 9.5h5"/></svg></span>
+        <h3>Hospitals</h3><p>Keeps high‑traffic entrance and ward mats consistently clean.</p></div>
+      <div class="use reveal"><span class="use__icon">
+        <svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></span>
+        <h3>Schools</h3><p>Less dust and grit carried into classrooms, every single day.</p></div>
+      <div class="use reveal"><span class="use__icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+        <h3>Offices</h3><p>A tidy first impression at every door, without extra staff time.</p></div>
+    </div>
+  </div>
+
+  <div class="features container">
+    <div class="feature feature--wide reveal">
+      <p class="feature__eyebrow">Motorised brush drum</p>
+      <p class="feature__big">Scrubs deep.<br>Every fibre.</p>
+      <p class="feature__txt">A full‑width rotating brush works dirt loose from the mat surface — far more thoroughly than shaking or beating by hand.</p>
+    </div>
+    <div class="feature reveal">
+      <p class="feature__eyebrow">Roller feed tray</p>
+      <p class="feature__big">Guided in.<br>Evenly.</p>
+      <p class="feature__txt">A bed of steel rollers carries the mat smoothly into the cleaning chamber.</p>
+    </div>
+    <div class="feature reveal">
+      <p class="feature__eyebrow">Digital controller</p>
+      <p class="feature__big">One panel.<br>Total control.</p>
+      <p class="feature__txt">A compact control unit with display lets anyone run a cleaning cycle.</p>
+    </div>
+    <div class="feature reveal">
+      <p class="feature__eyebrow">Belt‑driven power</p>
+      <p class="feature__big">Smooth.<br>Robust.</p>
+      <p class="feature__txt">A pulley‑and‑belt drive delivers steady torque to the brush drum.</p>
+    </div>
+    <div class="feature reveal">
+      <p class="feature__eyebrow">Enclosed cabinet</p>
+      <p class="feature__big">Mess stays<br>inside.</p>
+      <p class="feature__txt">A sturdy closed body keeps loosened dust contained, not in the air.</p>
+    </div>
+    <div class="feature feature--status reveal">
+      <p class="feature__eyebrow">Status</p>
+      <p class="feature__big gold">Prototype ready.<br>Testing done.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section how" id="how">
+  <div class="container">
+    <p class="eyebrow reveal">How it works</p>
+    <h2 class="section-title reveal">From dusty to done,<br>in five steps.</h2>
+
+    <div class="how__layout">
+      <div class="how__visual">
+        <div class="how__figure">
+          <img src="assets/smart-mat.webp" alt="" aria-hidden="true" loading="lazy">
+          <span class="hotspot" data-step="1" style="left:27%;top:10%"></span>
+          <span class="hotspot" data-step="2" style="left:38%;top:24%"></span>
+          <span class="hotspot" data-step="3" style="left:70%;top:28%"></span>
+          <span class="hotspot" data-step="4" style="left:74%;top:56%"></span>
+          <span class="hotspot" data-step="5" style="left:56%;top:36%"></span>
+        </div>
+      </div>
+
+      <ol class="steps">
+        <li class="step" data-step="1">
+          <span class="step__n">01</span>
+          <h3>Power on &amp; select</h3>
+          <p>Switch on the control unit and start a cleaning cycle from the panel.</p>
+        </li>
+        <li class="step" data-step="2">
+          <span class="step__n">02</span>
+          <h3>Feed the mat</h3>
+          <p>Lay the mat on the roller tray — the rollers guide it into the chamber.</p>
+        </li>
+        <li class="step" data-step="3">
+          <span class="step__n">03</span>
+          <h3>Deep brush scrub</h3>
+          <p>The rotating brush drum sweeps across the surface, lifting dust and grit.</p>
+        </li>
+        <li class="step" data-step="4">
+          <span class="step__n">04</span>
+          <h3>Belt‑driven motion</h3>
+          <p>The motor drives the drum through the pulley and belt for steady, even cleaning.</p>
+        </li>
+        <li class="step" data-step="5">
+          <span class="step__n">05</span>
+          <h3>Clean mat, ready</h3>
+          <p>Take out a refreshed mat — the dirt stays inside the enclosed cabinet.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<!-- TODO: replace the placeholder prices (₹XX,XXX) with real figures -->
+<section class="section pricing" id="pricing">
+  <div class="container">
+    <p class="eyebrow reveal">Pricing</p>
+    <h2 class="section-title reveal">Choose your Smart MaT.</h2>
+
+    <div class="plans">
+      <article class="plan reveal">
+        <h3>Smart MaT</h3>
+        <p class="plan__for">Single unit</p>
+        <p class="plan__price">₹XX,XXX</p>
+        <ul>
+          <li>Smart MaT cleaning unit</li>
+          <li>On‑site setup &amp; demo</li>
+          <li>Standard warranty</li>
+        </ul>
+        <a href="#contact" class="btn btn--ghost">Enquire</a>
+      </article>
+
+      <article class="plan plan--featured reveal">
+        <span class="plan__badge">Recommended</span>
+        <h3>Smart MaT + Care</h3>
+        <p class="plan__for">Unit with annual service</p>
+        <p class="plan__price">₹XX,XXX</p>
+        <ul>
+          <li>Everything in Smart MaT</li>
+          <li>Annual maintenance visits</li>
+          <li>Priority support &amp; spare brushes</li>
+        </ul>
+        <a href="#contact" class="btn btn--gold">Enquire</a>
+      </article>
+
+      <article class="plan reveal">
+        <h3>Institutions</h3>
+        <p class="plan__for">Hospitals · Schools · Campuses</p>
+        <p class="plan__price plan__price--sm">Custom quote</p>
+        <ul>
+          <li>Multiple units, volume pricing</li>
+          <li>Customisation to your mat sizes</li>
+          <li>Dedicated project consulting</li>
+        </ul>
+        <a href="#contact" class="btn btn--ghost">Talk to us</a>
+      </article>
+    </div>
+    <p class="fineprint reveal">Prices exclude taxes and delivery. Final pricing is confirmed with your quote.</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section faq" id="faq">
+  <div class="container container--narrow">
+    <p class="eyebrow reveal">FAQ</p>
+    <h2 class="section-title reveal">Questions, answered.</h2>
+
+    <div class="faq__list">
+      <details class="reveal">
+        <summary>How do I buy Smart MaT?</summary>
+        <div class="faq__a"><p>Reach out through the contact form below or by phone/email. We'll understand your requirement, arrange a demo, share a quote, and schedule delivery and setup once the order is confirmed.</p></div>
+      </details>
+      <details class="reveal">
+        <summary>Is Smart MaT available now?</summary>
+        <div class="faq__a"><p>The prototype is ready and testing is complete. We're now taking enquiries and early orders — contact us to reserve units or book a demonstration.</p></div>
+      </details>
+      <details class="reveal">
+        <summary>Who is it designed for?</summary>
+        <div class="faq__a"><p>Hospitals, schools and offices — anywhere with high foot traffic where entrance and floor mats need frequent, hygienic cleaning.</p></div>
+      </details>
+      <details class="reveal">
+        <summary>Can I see a live demo before buying?</summary>
+        <div class="faq__a"><p>Yes. We can demonstrate Smart MaT at your site or ours so you can see it clean your own mats.</p></div>
+      </details>
+      <details class="reveal">
+        <summary>Do you offer bulk or institutional pricing?</summary>
+        <div class="faq__a"><p>Yes. For multiple units or campus‑wide deployments we provide a custom quote, including options for customisation to your mat sizes.</p></div>
+      </details>
+      <details class="reveal">
+        <summary>What about installation and maintenance?</summary>
+        <div class="faq__a"><p>We handle setup and walk your staff through operation. Annual maintenance is included with the Smart MaT + Care plan and available as an add‑on for other plans.</p></div>
+      </details>
+      <details class="reveal">
+        <summary>Does Restechx take on other projects?</summary>
+        <div class="faq__a"><p>Absolutely. Beyond Smart MaT we offer product development, project consulting, and business consulting (marketing &amp; sales) across IoT, embedded systems, automation and AI/ML.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<!-- TODO: replace the placeholder email / phone / address with real details -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="contact__grid">
+      <div class="reveal">
+        <p class="eyebrow">Contact</p>
+        <h2 class="section-title">Let's build<br>something smart.</h2>
+        <ul class="contact__list">
+          <li><span>Email</span><a href="mailto:contact@example.com">contact@example.com</a></li>
+          <li><span>Phone</span><a href="tel:+910000000000">+91 00000 00000</a></li>
+          <li><span>Address</span><p>Your office address, City, State – PIN</p></li>
+        </ul>
+      </div>
+
+      <form class="form reveal" id="contactForm">
+        <label><span>Name</span><input name="name" required autocomplete="name"></label>
+        <label><span>Email</span><input name="email" type="email" required autocomplete="email"></label>
+        <label><span>Organisation</span><input name="org" autocomplete="organization"></label>
+        <label><span>I'm interested in</span>
+          <select name="topic">
+            <option>Buying Smart MaT</option>
+            <option>A demo</option>
+            <option>Institutional pricing</option>
+            <option>Engineering services</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label class="form__full"><span>Message</span><textarea name="message" rows="4"></textarea></label>
+        <button class="btn btn--gold form__full" type="submit">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <svg class="mini-globe" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="15" />
+        <ellipse class="spin-a" cx="20" cy="20" rx="6" ry="15" />
+        <line x1="5" y1="20" x2="35" y2="20" />
+      </svg>
+      <span>Restechx</span>
+    </div>
+    <p>© <span id="year"></span> Restechx. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
