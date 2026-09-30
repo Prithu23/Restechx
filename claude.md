@@ -1,1 +1,1 @@
-we are making a 
+never add yourseld as the collabrator 

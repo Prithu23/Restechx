@@ -87,14 +87,49 @@
     }
   });
 
-  /* ---- Contact form: opens the visitor's mail app (no backend yet) ---- */
+  /* ---- Contact form: posted to our own backend, which emails the enquiry ---- */
+  const FORM_ENDPOINT = '/api/contact';
   const form = document.getElementById('contactForm');
-  form.addEventListener('submit', e => {
+  const status = document.getElementById('formStatus');
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     const f = new FormData(form);
-    const to = document.querySelector('.contact__list a[href^="mailto:"]').getAttribute('href').slice(7);
-    const subject = `${f.get('topic')} — ${f.get('name')}`;
-    const body = `Name: ${f.get('name')}\nEmail: ${f.get('email')}\nOrganisation: ${f.get('org') || '-'}\n\n${f.get('message') || ''}`;
-    window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    if (f.get('_honey')) return; // bot filled the hidden field
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    status.className = 'form__status';
+    status.textContent = '';
+
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: f.get('name'),
+          email: f.get('email'),
+          org: f.get('org'),
+          topic: f.get('topic'),
+          message: f.get('message'),
+          _honey: f.get('_honey')
+        })
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) throw new Error(data.error || 'Send failed');
+
+      form.reset();
+      status.classList.add('is-ok');
+      status.textContent = 'Thank you — your message has been sent. We\'ll be in touch soon.';
+    } catch (err) {
+      status.classList.add('is-err');
+      status.textContent = err.message && err.message !== 'Send failed' && !/fetch|network/i.test(err.message)
+        ? err.message
+        : 'Sorry, something went wrong. Please try again in a moment.';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send message';
+    }
   });
 })();
